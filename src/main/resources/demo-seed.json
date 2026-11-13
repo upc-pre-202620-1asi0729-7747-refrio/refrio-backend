@@ -1,0 +1,142 @@
+{
+  "inventory": [
+    {
+      "id": "PRD-001",
+      "name": "Fresh Strawberries",
+      "category": "Fruits",
+      "stock": "90",
+      "temp": "4°C",
+      "exp": "2026-12-30",
+      "warehouse": "Lima Central"
+    },
+    {
+      "id": "PRD-002",
+      "name": "Organic Lettuce",
+      "category": "Vegetables",
+      "stock": "130",
+      "temp": "5°C",
+      "exp": "2027-01-08",
+      "warehouse": "Lima Central"
+    }
+  ],
+  "bodeguero-inventory": [
+    {
+      "id": "PRD-001",
+      "name": "Fresh Strawberries",
+      "category": "Fruits",
+      "stock": "20",
+      "temp": "4°C",
+      "exp": "2026-12-30",
+      "warehouse": "Bodega Principal"
+    }
+  ],
+  "batches": [
+    {
+      "id": "BT-4501",
+      "productId": "PRD-001",
+      "quantity": 50,
+      "weight": "30 kg",
+      "receptionDate": "2026-11-08",
+      "expirationDate": "2026-12-20",
+      "supplier": "Fresh Farms Co.",
+      "location": "Rampa 01",
+      "status": "Disponible",
+      "audience": "Supervisor"
+    },
+    {
+      "id": "BT-4502",
+      "productId": "PRD-001",
+      "quantity": 40,
+      "weight": "24 kg",
+      "receptionDate": "2026-11-08",
+      "expirationDate": "2026-12-30",
+      "supplier": "Fresh Farms Co.",
+      "location": "Rampa 02",
+      "status": "Disponible",
+      "audience": "Supervisor"
+    },
+    {
+      "id": "BT-4503",
+      "productId": "PRD-002",
+      "quantity": 130,
+      "weight": "50 kg",
+      "receptionDate": "2026-11-09",
+      "expirationDate": "2027-01-08",
+      "supplier": "Green Valley Produce",
+      "location": "Rack B4",
+      "status": "Disponible",
+      "audience": "Supervisor"
+    },
+    {
+      "id": "BT-R-4501",
+      "productId": "PRD-001",
+      "quantity": 20,
+      "weight": "10 kg",
+      "receptionDate": "2026-11-09",
+      "expirationDate": "2026-12-30",
+      "supplier": "Fresh Farms Co.",
+      "location": "Bodega Principal",
+      "status": "Disponible",
+      "audience": "Minorista"
+    }
+  ],
+  "clients": [
+    {
+      "id": "CLI-001",
+      "name": "Bodega San José",
+      "type": "Bodega",
+      "orders": 0,
+      "province": "Lima",
+      "district": "Surco",
+      "recipientId": "2"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "SUP-001",
+      "name": "Fresh Farms Co.",
+      "category": "Fruits & Vegetables",
+      "deliveries": 48,
+      "score": 98,
+      "rating": "4.8"
+    }
+  ],
+  "shipments": [],
+  "alerts": [
+    {
+      "id": "ALT-2841",
+      "type": "Temperature",
+      "time": "2h ago",
+      "location": "Warehouse North",
+      "severity": "Critical",
+      "audience": "Supervisor"
+    }
+  ],
+  "incidents": [],
+  "losses": [],
+  "telemetry": [
+    {
+      "id": "TMP-DEMO-1",
+      "productId": "PRD-001",
+      "audience": "Supervisor",
+      "value": 4,
+      "at": "2026-11-09T17:00:00Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "EVT-DEMO-1",
+      "name": "Inventario inicial de demostración",
+      "aggregateId": "PRD-001",
+      "description": "Datos de ejemplo; no son mediciones de producción",
+      "context": "Inventory & FEFO",
+      "occurredAt": "2026-11-09T17:00:00Z",
+      "actor": "system",
+      "source": "SYSTEM",
+      "outcome": "SUCCESS",
+      "audience": "Supervisor"
+    }
+  ],
+  "certificates": [],
+  "leads": []
+}
