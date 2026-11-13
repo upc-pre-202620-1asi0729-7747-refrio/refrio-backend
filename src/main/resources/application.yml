@@ -1,0 +1,51 @@
+server:
+  port: ${PORT:8080}
+spring:
+  application:
+    name: refrio-backend
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/refrio}
+    username: ${DB_USER:refrio}
+    password: ${DB_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+  messages:
+    basename: messages
+    encoding: UTF-8
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+app:
+  security:
+    jwt-secret: ${JWT_SECRET:}
+    token-ttl-seconds: ${TOKEN_TTL_SECONDS:86400}
+    allowed-origins: ${CORS_ORIGINS:http://localhost:4200}
+  bootstrap:
+    admin-username: ${BOOTSTRAP_ADMIN_USERNAME:}
+    admin-password: ${BOOTSTRAP_ADMIN_PASSWORD:}
+    allow-supervisor-registration: ${ALLOW_PUBLIC_SUPERVISOR_SIGNUP:false}
+  seed:
+    enabled: ${SEED_DEMO:false}
+    file: ${SEED_FILE:}
+    retail-password: ${DEMO_RETAIL_PASSWORD:}
+
+  external:
+    weather:
+      enabled: ${EXTERNAL_WEATHER_ENABLED:true}
+      base-url: ${EXTERNAL_WEATHER_BASE_URL:https://api.open-meteo.com}

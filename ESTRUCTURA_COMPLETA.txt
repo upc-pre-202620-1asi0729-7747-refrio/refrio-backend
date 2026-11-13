@@ -1,0 +1,44 @@
+REFRIO 1.1.0 — DDD 8 BOUNDED CONTEXTS
+
+src/main/java/com/refrio/platform/
+  iam/  (19 archivos Java)
+  inventory/  (24 archivos Java)
+  operations/  (25 archivos Java)
+  alerting/  (12 archivos Java)
+  traceability/  (11 archivos Java)
+  analytics/  (9 archivos Java)
+  publicportal/  (10 archivos Java)
+  events/  (9 archivos Java)
+  shared/  (infraestructura transversal, no BC)
+
+src/test/java/com/refrio/platform/
+  iam/  (3 archivos Java)
+  inventory/  (3 archivos Java)
+  operations/  (8 archivos Java)
+  alerting/  (2 archivos Java)
+  traceability/  (5 archivos Java)
+  analytics/  (2 archivos Java)
+  publicportal/  (2 archivos Java)
+  events/  (2 archivos Java)
+  architecture/  (pruebas transversales)
+
+DOCUMENTACION:
+  docs/API_CONTRACT.md
+  docs/ARCHITECTURE_DECISIONS.md
+  docs/C4_MODELS.md
+  docs/CLASS_DIAGRAMS.md
+  docs/DDD_ARCHITECTURE.md
+  docs/DEPLOYMENT_EVIDENCE.md
+  docs/EVENTSTORMING_DESIGN.md
+  docs/EXTERNAL_SERVICE.md
+  docs/INTELLIJ_GITHUB.md
+  docs/MODULE_INVENTORY.md
+  docs/PHYSICAL_DATA_MODEL.md
+  docs/RUBRIC_ALIGNMENT_1ASI0729.md
+  docs/TECHNICAL_STORIES.md
+  docs/TEST_MATRIX.md
+  docs/UML_DETAILED_8_BC.md
+
+VERIFICACION: se compilaron 58 archivos de dominio y pasaron 27 checks con Java 21.
+Las pruebas Maven/JUnit, PostgreSQL y Docker están preparadas, pero NO pudieron ejecutarse localmente por falta de dependencias/red.
+La nota 20/20 depende además del informe, las evidencias, el despliegue, frontend, landing y sustentación.
