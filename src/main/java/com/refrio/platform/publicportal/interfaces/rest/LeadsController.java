@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class LeadsController {
  private final LeadApplicationService service;
  public LeadsController(LeadApplicationService service){this.service=service;}
- public record LeadRequest(@NotBlank String companyName,@NotBlank String contactName,@NotBlank @Email String email,String phone,String interestedPlan,String notes){}
+  public record LeadRequest(@NotBlank @Size(max=120) String companyName,@NotBlank @Size(max=120) String contactName,@NotBlank @Email @Size(max=254) String email,@Size(max=32) String phone,@Size(max=32) String interestedPlan,@Size(max=1500) String notes){}
  @PostMapping @ResponseStatus(HttpStatus.CREATED) public ObjectNode submit(@Valid @RequestBody LeadRequest input){return service.submit(input.companyName(),input.contactName(),input.email(),input.phone()==null?"":input.phone(),input.interestedPlan()==null?"":input.interestedPlan(),input.notes()==null?"":input.notes());}
  @GetMapping public ArrayNode list(@AuthenticationPrincipal AuthenticatedUser user){if(!user.supervisor())throw new ForbiddenOperationException("Solo supervisores pueden consultar contactos comerciales");return service.all();}
 }
