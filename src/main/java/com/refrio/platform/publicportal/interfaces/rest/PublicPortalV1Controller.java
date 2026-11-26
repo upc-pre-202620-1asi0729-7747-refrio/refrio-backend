@@ -30,7 +30,7 @@ public class PublicPortalV1Controller {
         return service.updateStatus(id,LeadStatus.valueOf(request.status()));
     }
     @PostMapping("/leads") @ResponseStatus(HttpStatus.CREATED)
-    public com.fasterxml.jackson.databind.node.ObjectNode submit(@RequestBody SubmitLeadCommand request){
+    public com.fasterxml.jackson.databind.node.ObjectNode submit(@jakarta.validation.Valid @RequestBody SubmitLeadCommand request){
         return intake.submit(request.companyName(),request.contactName(),request.email(),
             request.phone(),request.interestedPlan(),request.notes());
     }
